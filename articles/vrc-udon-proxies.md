@@ -3,7 +3,7 @@ title: "U# でよく使うプロキシスクリプトについて"
 emoji: "📔"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Unity", "VRChat", "UdonSharp"]
-published: false
+published: true
 ---
 
 VRChat でワールドギミックを作っていると、プレイヤーのインタラクトを別の Udon のスクリプトに転送したい事があります。稀によくある。
