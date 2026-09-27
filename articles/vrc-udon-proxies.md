@@ -206,6 +206,10 @@ VRChat ワールド内の個々の Udon のプログラムは `UdonBehaviour` �
 ### `Utilities.IsValid(_target)`
 普通の .cs プログラムだと `_target != null` とかでチェックするものです。VRChat のワールドでは、ログアウトした瞬間のプレイヤーとかで「null でもないのに無効なオブジェクト」が居たりするので、オブジェクト相手にはこちらを使うのが無難です。
 
+### `public void _EventA()`
+SendCustomEvent で呼ばれてイベントとして受け取るためには可視性が `public` でないといけません。
+また、今回はネットワーク同期が関係ないので、ネットワーク側から呼ばれないように[^legacysecurity]先頭にアンダースコアを付けます。
+
 :::
 
 ## なんでこれが必要になるのか
@@ -217,3 +221,5 @@ VRChat ワールド内の個々の Udon のプログラムは `UdonBehaviour` �
 [^performance]: Random Tips & Performance Pointers | UdonSharp https://udonsharp.docs.vrchat.com/random-tips-&-performance-pointers/#sendcustomevent--method-calls-across-behaviours
 
 [^activerelay]: https://github.com/mimyquality/FukuroUdon/wiki/Active-Relay
+
+[^legacysecurity]: https://creators.vrchat.com/worlds/udon/networking/events/#legacy-events-and-security
