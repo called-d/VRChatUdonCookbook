@@ -54,7 +54,7 @@ using VRC.Udon;
 
 public class SampleTargetObject : UdonSharpBehaviour
 {
-    private readonly string TAG = "[<color=\"purple\">SampleTargetObject</color>]";
+    private readonly string TAG = "[<color=#ff88ff>SampleTargetObject</color>]";
 
     public void _EventA()
     {
